@@ -1,13 +1,13 @@
 [project]
 name = "zenodo-rdm-app"
-version = "22.5.0"
+version = "23.0.0"
 authors = [
     { name = "CERN" }
 ]
 license = "GPL-3.0"
 requires-python = ">=3.9"
 dependencies = [
-    "invenio-app-rdm[opensearch2]==14.0.0b3.dev6",
+    "invenio-app-rdm[opensearch2]==14.0.0b6.dev0",
     "zenodo-legacy",
     "zenodo-rdm",
     "github3.py>=3.0.0",
@@ -28,7 +28,7 @@ zenodo-rdm = { workspace = true }
 zenodo-legacy = { workspace = true }
 invenio-swh = { git = "https://github.com/inveniosoftware/invenio-swh", rev = "v0.13.4" }
 # User profile fixes
-invenio-records-resources = { git = "https://github.com/inveniosoftware/invenio-records-resources", branch = "fix-read-many" }
+invenio-records-resources = { git = "https://github.com/ptamarit/invenio-records-resources", branch = "fix-read-many-rebased" }
 
 [tool.uv.workspace]
 members = [
