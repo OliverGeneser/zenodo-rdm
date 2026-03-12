@@ -7,6 +7,7 @@
 
 """Zenodo legacy files schemas."""
 
+from flask_resources import BaseListSchema
 from marshmallow import Schema, fields, post_dump
 from marshmallow_utils.fields import SanitizedUnicode
 
@@ -55,7 +56,7 @@ class LegacyFilesRESTSchema(Schema):
         }
 
 
-class LegacyFileListSchema(Schema):
+class LegacyFileListSchema(BaseListSchema):
     """Files list schema."""
 
     entries = fields.List(fields.Nested(LegacyFileSchema), dump_only=True)
