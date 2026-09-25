@@ -23,6 +23,7 @@ dependencies = [
     "invenio-records-resources",
     "invenio-github>=7.0.0,<8.0.0",
     "invenio-rdm-records",
+    "invenio-db",
 ]
 
 [tool.uv.sources]
@@ -35,6 +36,8 @@ invenio-app-rdm = { git = "https://github.com/inveniosoftware/invenio-app-rdm", 
 invenio-rdm-records = { git = "https://github.com/inveniosoftware/invenio-rdm-records", branch = "feature/orcha" }
 # Python 3.14 + xrootdpyfs 3.x support (inveniosoftware/invenio-xrootd#40)
 invenio-xrootd = { git = "https://github.com/ntarocco/invenio-xrootd", branch = "upgrade-xrootdpyf" }
+
+invenio-db = { path ="../invenio-db", editable = true }
 
 [tool.uv.workspace]
 members = [
